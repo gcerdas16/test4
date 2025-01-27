@@ -6,8 +6,6 @@ import path from "path";
 import fs, { stat } from "fs";
 //import { start, reset, stop } from "~/services/idle-custom";
 import { QueueConfig, createMessageQueue } from "fast";
-import { humanoflow2 } from "./humanoflow";
-
 const queueConfig: QueueConfig = { gapMilliseconds: 15000 };
 const enqueueMessage = createMessageQueue(queueConfig);
 
@@ -36,11 +34,11 @@ export const faqFlow = addKeyword(EVENTS.ACTION).addAction(
           { role: "user", content: EnqueueMessageBody },
           { role: "assistant", content: response },
         ]);
-        if (response.includes("humanotest")) {
-          return gotoFlow(
-            humanoflow2
-          );
-        }
+        //if (response.includes("humanotest")) {
+        //return gotoFlow(
+        //humanoflow2
+        //);
+        //}
         return endFlow(response);
 
       } catch (error) {

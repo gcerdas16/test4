@@ -7,7 +7,6 @@ import { createFlow } from "@builderbot/bot";
 import { mainFlow } from "./mainFlow";
 //import { menuFlow } from "./menuFlow";
 import { faqFlow } from "./faqFlow";
-import { humanoflow2 } from "./humanoflow";
 
 export default createFlow([
     mainFlow,
@@ -16,5 +15,4 @@ export default createFlow([
     sendImageFlow,
     sendPdfFlow,
     sendVoiceFlow,
-    humanoflow2,
 ]);
