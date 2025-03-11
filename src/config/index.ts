@@ -2,11 +2,13 @@ import "dotenv/config";
 
 export const config = {
     PORT: process.env.PORT ?? 3008,
+    provider: process.env.provider,
+
     //Meta
     jwtToken: process.env.jwtToken,
     numberId: process.env.numberId,
     verifyToken: process.env.verifyToken,
-    version: "v20.0",
+    version: "v21.0",
     // AI
     Model: process.env.Model,
     ApiKey: process.env.ApiKey,
