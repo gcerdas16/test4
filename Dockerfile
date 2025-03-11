@@ -28,7 +28,7 @@ WORKDIR /app
 
 ARG PORT
 ENV PORT $PORT
-EXPOSE $PORT
+EXPOSE $PORTs
 
 # Copiar archivos desde la fase de construcción
 COPY --from=builder /app/assets ./assets
