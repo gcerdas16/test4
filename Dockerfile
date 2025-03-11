@@ -1,5 +1,8 @@
 FROM node:21-bullseye-slim as builder
 
+# Install git and any other necessary tools
+RUN apk add --no-cache git
+
 WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
